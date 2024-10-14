@@ -1,7 +1,6 @@
 @charset "utf-8";
 
-/* base
-------------------------*/
+/* base*/
 body {
     color: #6C6C6F;
     font-size: 16px;
@@ -16,8 +15,7 @@ img {
     vertical-align: bottom;
 }
 
-/* module
-------------------------*/
+
 /* unit */
 .unit__catch {
     margin-bottom: 20px;
@@ -25,7 +23,7 @@ img {
     font-size: 14px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    /* 英語を大文字にする */
+
 }
 
 .unit__title {
@@ -120,8 +118,7 @@ img {
     font-size: 15px;
 }
 
-/* index
-------------------------*/
+/* index*/
 /* features */
 .features {
     padding: 80px 0;
@@ -180,8 +177,7 @@ img {
     width: 46%;
 }
 
-/* service
-------------------------*/
+/* service*/
 .wedo {
     padding: 80px 0;
 }
