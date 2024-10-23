@@ -1,0 +1,147 @@
+@charset "utf-8";
+$color-text: #31353B;
+$color-accent: #FF9900;
+$color-btn: #F85A47;
+
+@mixin inner($mw: 1000px, $w: 90%) {
+    max-width: $mw;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex($a: center, $j: space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $j;
+    align-items: $a;
+}
+
+body {
+    color: $color-text;
+    font-size: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: (26/15);
+    letter-spacing: 0.02em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.header {
+    margin-bottom: 80px;
+    text-align: center;
+    font-weight: bold;
+
+    &__inner {
+        @include inner();
+        @include flex(flex);
+    }
+
+    &__title {
+        font-size: 24px;
+    }
+}
+
+.nav {
+    &__list {
+        @include flex(flex);
+    }
+}
+
+.filed {
+    margin-right: 30px;
+}
+
+.active {
+    color: $color-accent;
+}
+
+// about
+.about {
+    padding: 0 0 120px;
+
+    &__inner {
+        @include inner();
+        @include flex(flex-start);
+    }
+
+    &__item {
+        width: (440/1000*100%);
+    }
+
+    &__pic {
+        width: (500/1000*100%);
+
+    }
+
+    &__title {
+        font-size: (48px);
+        line-height: (58/48);
+    }
+
+    &__catch {
+        color: $color-accent;
+    }
+
+
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    margin-top: 60px;
+    margin-right: auto;
+    padding: 20px;
+    background-color: $color-btn;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+
+//review
+.review {
+    padding: 0 0 120px 0;
+
+    &__catch {
+        color: $color-accent;
+
+    }
+
+    &__title {
+        font-size: (48px);
+        line-height: (58/48);
+        margin-bottom: 40px;
+
+    }
+
+    &__inner {
+        @include inner();
+
+
+    }
+
+    &__item {
+        width: (470/1000)*100%;
+
+
+    }
+
+    &__list {
+        @include flex();
+    }
+
+}
+
+.footer {
+    &__inner {
+        @include flex();
+    }
+}
