@@ -151,6 +151,7 @@ body {
         width: (380/800)*100%;
         margin-bottom: 60px;
     }
+
 }
 
 // trending //
@@ -173,4 +174,58 @@ body {
     &__item {
         width: (380/800)*100%;
     }
+}
+
+.about__btn {
+    display: block;
+    width: 160px;
+    margin-top: 25px;
+    margin-left: auto;
+    padding: 14px;
+    background-color: $color-main;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+// about//
+//discovery//
+.discovery {
+    padding: 60px 0;
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__item {
+        width: (240/800)*100%;
+    }
+
+    &__list {
+        @include flex(flex-start);
+    }
+
+    &__title {
+        @include title-main();
+    }
+
+
+}
+
+.discovery__card {
+
+    &__title {
+        margin-bottom: 15px;
+        color: $color-main;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: (23/18);
+
+    }
+    
 }
