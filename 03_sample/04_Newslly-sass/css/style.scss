@@ -6,9 +6,9 @@ $color-accent: #FA6980;
 $color-bg: #F6F6F6;
 $color-time: #BBBBBB;
 
-@mixin inner($mw: 800px, $W: 90%) {
+@mixin inner($mw: 800px, $w: 90%) {
     max-width: $mw;
-    width: $W;
+    width: $w;
     margin-left: auto;
     margin-right: auto;
 }
@@ -39,25 +39,24 @@ body {
     letter-spacing: 0;
 }
 
-/* header*/
+
 .header {
     padding: 30px 0 60px;
     text-align: center;
 
     &__inner {
-        @include inner(90%, 800px);
+        @include inner();
     }
 }
 
 
-/* footer */
 .footer {
     padding: 100px 0 40px;
     background-color: $color-main;
     color: #fff;
 
     &__inner {
-        @include inner(90%, 800px);
+        @include inner();
     }
 
     &__copy {
@@ -66,16 +65,77 @@ body {
 }
 
 
+.post {
+    &__category {
+        margin-bottom: 10px;
+        color: $color-accent;
+        font-size: 12px;
+        font-style: oblique;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        color: $color-main;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: (23/18);
+    }
+}
 
 
-/* index.html
----------------------------*/
+.card {
+    background-color: #fff;
+
+    &__body {
+        padding: 35px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        color: $color-main;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: (23/18);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.btn {
+    display: block;
+    width: 160px;
+    margin-top: 25px;
+    margin-left: auto;
+    padding: 14px;
+    background-color: $color-accent;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.time {
+    margin-top: 20px;
+    padding-left: 26px;
+    color: $color-time;
+    font-size: 12px;
+    background: url(../images/icon_time.png) no-repeat left center;
+}
+
+
 /* more */
 .more {
     padding-bottom: 60px;
 
     &__inner {
-        @include inner(90%, 800px);
+        @include inner();
     }
 
     &__title {
@@ -90,5 +150,27 @@ body {
     &__item {
         width: (380/800)*100%;
         margin-bottom: 60px;
+    }
+}
+
+// trending //
+.trending {
+    padding: 60px 0;
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include title-main();
+    }
+
+    &__list {
+        @include flex(flex-start);
+    }
+
+    &__item {
+        width: (380/800)*100%;
     }
 }
